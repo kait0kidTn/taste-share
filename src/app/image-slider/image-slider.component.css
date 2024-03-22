@@ -1,0 +1,13 @@
+#slideshow {
+  width: 50%;
+  height: 400px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#slideshow img {
+  max-width: 100%;
+  max-height: 100%;
+}
