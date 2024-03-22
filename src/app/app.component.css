@@ -1,0 +1,13 @@
+#nav1 {
+  background-color: #5cb85c;
+}
+#btn1 {
+  background-color: #ffff00;
+}
+#btn2 {
+  background-color: #ffa500;
+}
+#navbarNav .nav-link {
+  margin-right: 20px;
+  margin-left: 20px;
+}

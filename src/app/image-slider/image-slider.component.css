@@ -1,0 +1,12 @@
+#slideshow {
+  overflow: hidden;
+  position: absolute;
+  top: calc(50% + 28px);
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+}
+
+#slideshow img {
+  height: calc(100vh - 60px);
+}
