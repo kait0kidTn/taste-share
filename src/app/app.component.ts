@@ -10,5 +10,17 @@ import { ImageSliderComponent } from './image-slider/image-slider.component';
   styleUrl: './app.component.css',
 })
 export class AppComponent {
-  title = 'taste_nd_share';
+  toHome() {
+    document.getElementById('home')?.scrollIntoView({ behavior: 'smooth' });
+  }
+
+  toServices() {
+    document.getElementById('Services')?.scrollIntoView({ behavior: 'smooth' });
+  }
+  toAbout() {
+    document.getElementById('About')?.scrollIntoView({ behavior: 'smooth' });
+  }
+  toContact() {
+    document.getElementById('Contact')?.scrollIntoView({ behavior: 'smooth' });
+  }
 }
