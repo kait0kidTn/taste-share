@@ -1,16 +1,22 @@
+.welcome {
+  height: 100vh;
+  position: relative;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%);
+}
+
 .welcome-message {
   text-align: center;
-  background-color: rgba(255, 255, 255, 0.4);
-  margin-top: 20%;
+  text-shadow: #333 1px 1px;
 }
 
 .welcome-message h1 {
   font-size: 60px;
-  color: #333;
+  color: white;
   margin-bottom: 30px;
 }
-.where {
-  text-align: center;
-  color: gray;
+.welcome-message h3 {
+  color: rgb(255, 255, 255);
   font-size: 24px;
 }

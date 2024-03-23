@@ -1,9 +1,10 @@
 import { Component, OnInit } from '@angular/core';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-image-slider',
   standalone: true,
-  imports: [],
+  imports: [CommonModule],
   templateUrl: './image-slider.component.html',
   styleUrl: './image-slider.component.css',
 })

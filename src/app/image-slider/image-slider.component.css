@@ -1,12 +1,15 @@
 #slideshow {
-  overflow: hidden;
   position: absolute;
-  top: calc(50% + 28px);
-  left: 50%;
-  transform: translate(-50%, -50%);
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
   z-index: -1;
 }
 
 #slideshow img {
-  height: calc(100vh - 60px);
+  image-rendering: crisp-edges;
+  width: 100%;
+  height: 100%;
+  filter: blur(5px);
 }
