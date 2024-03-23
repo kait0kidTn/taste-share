@@ -18,6 +18,8 @@ import { ContactComponent } from './contact/contact.component';
   styleUrl: './app.component.css',
 })
 export class AppComponent {
+  public passwordType: string = 'password';
+
   toHome() {
     document.getElementById('home')?.scrollIntoView({ behavior: 'smooth' });
   }
@@ -30,5 +32,9 @@ export class AppComponent {
   }
   toContact() {
     document.getElementById('Contact')?.scrollIntoView({ behavior: 'smooth' });
+  }
+
+  public changePasswordType(checked: boolean) {
+    this.passwordType = checked ? 'text' : 'password';
   }
 }
