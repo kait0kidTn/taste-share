@@ -32,7 +32,6 @@
       type="button"
       data-bs-toggle="modal"
       data-bs-target="#exampleModal"
-      (click)="login(emailLogin.value, passwordLogin.value)"
     >
       Log in
     </button>
@@ -42,9 +41,6 @@
       type="button"
       data-bs-toggle="modal"
       data-bs-target="#exampleModal2"
-      (click)="
-        signup(usernameSignup.value, emailSignup.value, passwordSignup.value)
-      "
     >
       Sign Up
     </button>
@@ -102,7 +98,12 @@
         </div>
       </div>
       <div class="modal-footer" style="display: flex; justify-content: center">
-        <button type="button" class="btn btn-primary" style="width: 10rem">
+        <button
+          (click)="login(emailLogin.value, passwordLogin.value)"
+          type="button"
+          class="btn btn-primary"
+          style="width: 10rem"
+        >
           Login
         </button>
       </div>
@@ -159,7 +160,18 @@
         </div>
       </div>
       <div class="modal-footer" style="display: flex; justify-content: center">
-        <button type="button" class="btn btn-primary" style="width: 10rem">
+        <button
+          (click)="
+            signup(
+              usernameSignup.value,
+              emailSignup.value,
+              passwordSignup.value
+            )
+          "
+          type="button"
+          class="btn btn-primary"
+          style="width: 10rem"
+        >
           Signup
         </button>
       </div>
