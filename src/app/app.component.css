@@ -1,12 +1,13 @@
 #nav1 {
-  background-color: #5cb85c;
+  border-bottom: 1px solid;
 }
-#btn1 {
-  background-color: #ffff00;
+
+.pacifico-regular {
+  font-family: "Pacifico", cursive;
+  font-weight: 400;
+  font-style: normal;
 }
-#btn2 {
-  background-color: #ffa500;
-}
+
 #navbarNav .nav-link {
   margin-right: 20px;
   margin-left: 20px;
