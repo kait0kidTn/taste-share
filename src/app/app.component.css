@@ -1,7 +1,3 @@
-#nav1 {
-  border-bottom: 1px solid;
-}
-
 .pacifico-regular {
   font-family: "Pacifico", cursive;
   font-weight: 400;
@@ -11,4 +7,8 @@
 #navbarNav .nav-link {
   margin-right: 20px;
   margin-left: 20px;
+}
+
+button {
+  color: white;
 }
