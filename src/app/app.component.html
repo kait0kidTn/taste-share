@@ -32,6 +32,7 @@
       type="button"
       data-bs-toggle="modal"
       data-bs-target="#exampleModal"
+      (click)="login(emailLogin.value, passwordLogin.value)"
     >
       Log in
     </button>
@@ -41,6 +42,9 @@
       type="button"
       data-bs-toggle="modal"
       data-bs-target="#exampleModal2"
+      (click)="
+        signup(usernameSignup.value, emailSignup.value, passwordSignup.value)
+      "
     >
       Sign Up
     </button>
@@ -51,7 +55,7 @@
 <app-about></app-about>
 <app-contact></app-contact>
 
-<!-- Modal -->
+<!-- Modal mta3 sign in -->
 <div
   class="modal fade"
   id="exampleModal"
@@ -78,10 +82,10 @@
       </div>
       <div class="modal-body">
         <label>Email</label>
-        <input type="email" class="form-control" />
+        <input #emailLogin type="email" class="form-control" />
         <br />
         <label>Password</label>
-        <input [type]="passwordType" class="form-control" />
+        <input #passwordLogin [type]="passwordType" class="form-control" />
         <br />
         <div class="form-check">
           <input
@@ -105,7 +109,7 @@
     </div>
   </div>
 </div>
-
+<!--modal sign up  -->
 <div
   class="modal fade"
   id="exampleModal2"
@@ -132,13 +136,13 @@
       </div>
       <div class="modal-body">
         <label>Username</label>
-        <input type="text" class="form-control" />
+        <input #usernameSignup type="text" class="form-control" />
         <br />
         <label>Email</label>
-        <input type="email" class="form-control" />
+        <input #emailSignup type="email" class="form-control" />
         <br />
         <label>Password</label>
-        <input [type]="passwordType" class="form-control" />
+        <input #passwordSignup [type]="passwordType" class="form-control" />
         <br />
         <div class="form-check">
           <input
