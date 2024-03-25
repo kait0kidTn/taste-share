@@ -1,3 +1,69 @@
+body {
+  background-color: #eee;
+}
+
+/* Switcher*/
+.switcher {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+}
+
+/* NavBar */
+
+.navbar-nav {
+  display: flex;
+
+  justify-content: space-between;
+  width: 20%;
+}
+
+.navbar {
+  height: 60px;
+  filter: blur(13.7);
+  border-radius: 20px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+nav ul {
+  list-style-type: none;
+  display: flex;
+  justify-content: space-around;
+}
+
+/* search bar*/
+div:has(.search) {
+  position: relative;
+}
+
+div .search {
+  background-color: #e1e8ed;
+  filter: blur(13.7);
+}
+
+.search:focus {
+  outline: none;
+  box-shadow: none;
+}
+/* */
+nav ul li:last-child a img {
+  width: 30px;
+  height: 30px;
+  border-radius: 35px;
+  background-size: cover;
+}
+
+nav ul li a:hover {
+  background-color: #e1e8ed;
+  border-radius: 12px;
+  transition: 0.3s ease;
+}
+
+.nav-link {
+  padding-left: 15px;
+}
+
 .pacifico-regular {
   font-family: "Pacifico", cursive;
   font-weight: 400;

@@ -1,0 +1,73 @@
+<div class="container">
+  <h1 class="title">Add Recipe</h1>
+  <form>
+    <!-- 2 column grid layout with text inputs for the first and last names -->
+    <div class="form-floating mb-3">
+      <input
+        type="text"
+        class="form-control"
+        id="nameR"
+        name="nameR"
+        placeholder="Enter your name"
+      />
+      <label for="name">Recipe Name</label>
+    </div>
+    <div class="form-floating mb-3">
+      <input
+        type="text"
+        class="form-control"
+        id="ingR"
+        name="ingR"
+        placeholder=""
+        value="Each ingredient must be separated by / or ,"
+      />
+      <label for="email">Ingredients</label>
+    </div>
+    <div class="form-floating mb-3">
+      <input
+        type="text"
+        class="form-control"
+        id="imgR"
+        name="imgR"
+        placeholder=""
+      />
+      <label for="imgR">Image url</label>
+    </div>
+    <div class="form-floating mb-3">
+      <input
+        type="text"
+        class="form-control"
+        id="vidR"
+        name="vidR"
+        placeholder=""
+      />
+      <label for="imgR">Video url (Optional if there is a description)</label>
+    </div>
+    <div class="form-floating mb-4">
+      <input
+        type="text"
+        class="form-control"
+        id="pubR"
+        name="pubR"
+        placeholder=""
+        value="user1"
+        disabled
+      />
+      <label for="imgR">Publisher</label>
+    </div>
+    <div class="form-floating mb-3">
+      <textarea
+        class="form-control"
+        id="descR"
+        name="descR"
+        placeholder="Description"
+        rows="4"
+        cols="50"
+      ></textarea>
+      <label for="descR">Description (optional if there is a video)</label>
+    </div>
+    <!-- Submit button -->
+    <button type="submit" class="btn btn-primary mb-4 me-3">Add Recipe</button>
+    <button type="reset" class="btn btn-danger mb-4">Cancel</button>
+  </form>
+</div>
