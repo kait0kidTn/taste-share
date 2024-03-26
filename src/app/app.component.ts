@@ -9,6 +9,7 @@ import { SignInComponent } from './sign-in/sign-in.component';
 import { AddRecipeComponent } from './add-recipe/add-recipe.component';
 import { SignUpComponent } from './sign-up/sign-up.component';
 import { CommonModule } from '@angular/common';
+import { AboutComponent } from './about/about.component';
 @Component({
   selector: 'app-root',
   standalone: true,
@@ -21,6 +22,7 @@ import { CommonModule } from '@angular/common';
     AddRecipeComponent,
     SignInComponent,
     SignUpComponent,
+    AboutComponent,
     RouterLink,
     HttpClientModule,
   ],
@@ -39,7 +41,7 @@ export class AppComponent {
     document.getElementById('Services')?.scrollIntoView({ behavior: 'smooth' });
   }
   toAbout() {
-    document.getElementById('About')?.scrollIntoView({ behavior: 'smooth' });
+    document.getElementById('Aboutt')?.scrollIntoView({ behavior: 'smooth' });
   }
   toContact() {
     document.getElementById('Contact')?.scrollIntoView({ behavior: 'smooth' });
