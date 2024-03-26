@@ -9,7 +9,6 @@
   <ng-template #startPage>
     <nav id="nav1" class="navbar navbar-expand-lg">
       <div class="container-fluid">
-        <a class="navbar-brand pacifico-regular" href="#">Taste&Share</a>
         <button
           class="navbar-toggler"
           type="button"
@@ -18,10 +17,12 @@
           aria-controls="navbarNav"
           aria-expanded="false"
           aria-label="Toggle navigation"
-          onclick="toHome()"
         >
           <span class="navbar-toggler-icon"></span>
         </button>
+        <a class="navbar-brand pacifico-regular" (click)="toHome()"
+          >Taste&Share</a
+        >
         <div
           class="collapse navbar-collapse justify-content-center"
           id="navbarNav"
@@ -79,7 +80,7 @@
         >
           <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="navbar-brand pacifico-regular">Taste&Share</div>
+        <a class="navbar-brand pacifico-regular">Taste&Share</a>
         <form
           class="d-flex align-content-center d-lg-none pe-auto col"
           role="search"
@@ -131,7 +132,8 @@
                 ><img
                   src="assets/images/plus.svg"
                   alt="Home"
-                  routerLink="add-recipe"
+                  routerLink="/add-recipe"
+                  routerLinkActive="active"
               /></a>
             </li>
             <li class="nav-item">
@@ -154,7 +156,8 @@
               <a
                 class="nav-link active"
                 aria-current="page"
-                routerLink="add-recipe"
+                routerLink="/add-recipe"
+                routerLinkActive="active"
                 >add Recipe</a
               >
             </li>
@@ -168,6 +171,6 @@
         </div>
       </div>
     </nav>
-    <router-outlet class="mt-5"></router-outlet>
+    <router-outlet></router-outlet>
   </ng-template>
 </main>

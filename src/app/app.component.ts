@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { RouterLink } from '@angular/router';
+import { RouterLink, RouterLinkActive } from '@angular/router';
 import { RouterOutlet } from '@angular/router';
 import { WelcomeComponent } from './welcome/welcome.component';
 import { ServicesComponent } from './services/services.component';
@@ -20,6 +20,7 @@ import { CommonModule } from '@angular/common';
     ContactComponent,
     AddRecipeComponent,
     SignInComponent,
+    RouterLinkActive,
     SignUpComponent,
     RouterLink,
     HttpClientModule,
@@ -32,7 +33,7 @@ export class AppComponent {
   constructor(private readonly httpClient: HttpClient) {}
 
   toHome() {
-    document.getElementById('home')?.scrollIntoView({ behavior: 'smooth' });
+    document.getElementById('Welcome')?.scrollIntoView({ behavior: 'smooth' });
   }
 
   toServices() {

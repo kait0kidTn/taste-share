@@ -1,6 +1,6 @@
 <div class="container">
   <h1 class="title">Add Recipe</h1>
-  <form>
+  <form (ngSubmit)="sendData()">
     <!-- 2 column grid layout with text inputs for the first and last names -->
     <div class="form-floating mb-3">
       <input
@@ -8,6 +8,7 @@
         class="form-control"
         id="nameR"
         name="nameR"
+        [(ngModel)]="newRecipe.name"
         placeholder="Enter your name"
       />
       <label for="name">Recipe Name</label>
@@ -17,17 +18,18 @@
         type="text"
         class="form-control"
         id="ingR"
+        [(ngModel)]="newRecipe.ingredients"
         name="ingR"
         placeholder=""
-        value="Each ingredient must be separated by / or ,"
       />
-      <label for="email">Ingredients</label>
+      <label for="ingR">Ingredients</label>
     </div>
     <div class="form-floating mb-3">
       <input
         type="text"
         class="form-control"
         id="imgR"
+        [(ngModel)]="newRecipe.image"
         name="imgR"
         placeholder=""
       />
@@ -38,6 +40,7 @@
         type="text"
         class="form-control"
         id="vidR"
+        [(ngModel)]="newRecipe.video"
         name="vidR"
         placeholder=""
       />
@@ -50,21 +53,21 @@
         id="pubR"
         name="pubR"
         placeholder=""
-        value="user1"
-        disabled
+        [(ngModel)]="newRecipe.publisher"
       />
       <label for="imgR">Publisher</label>
     </div>
-    <div class="form-floating mb-3">
+    <div class="mb-3">
+      <label for="descR">Description (optional if there is a video)</label>
       <textarea
         class="form-control"
         id="descR"
         name="descR"
+        [(ngModel)]="newRecipe.description"
         placeholder="Description"
         rows="4"
         cols="50"
       ></textarea>
-      <label for="descR">Description (optional if there is a video)</label>
     </div>
     <!-- Submit button -->
     <button type="submit" class="btn btn-primary mb-4 me-3">Add Recipe</button>

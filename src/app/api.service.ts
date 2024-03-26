@@ -1,16 +1,19 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
-import { Observable } from 'rxjs';
-
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 @Injectable({
   providedIn: 'root',
 })
 export class ApiService {
-  private baseUrl = 'https://localhost:80/api';
   constructor(private http: HttpClient) {}
-  sendFormData(formData: FormData) {
-    const apiUrl = 'https://localhost:80/add';
 
-    return this.http.post(apiUrl, formData);
+  sendFormData(formData: FormData) {
+    const apiUrl = 'http://localhost/api/backendManager.php';
+    const data = Object.fromEntries(formData.entries());
+    const jsonData = JSON.stringify(data);
+    const httpOptions = {
+      headers: new HttpHeaders({ 'Content-Type': 'application/json' }),
+    };
+    console.log(jsonData);
+    return this.http.post(apiUrl, jsonData, httpOptions);
   }
 }

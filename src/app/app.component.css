@@ -4,7 +4,7 @@ body {
 
 /* Switcher*/
 .switcher {
-  position: absolute;
+  position: fixed;
   bottom: 20px;
   right: 20px;
 }
@@ -13,17 +13,18 @@ body {
 
 .navbar-nav {
   display: flex;
-
   justify-content: space-between;
   width: 20%;
 }
 
 .navbar {
+  position: fixed;
   height: 60px;
   filter: blur(13.7);
-  border-radius: 20px;
   margin: 0 auto;
   width: 100%;
+  z-index: 1000;
+  background-color: #e1e8ed;
 }
 
 nav ul {
@@ -77,4 +78,8 @@ nav ul li a:hover {
 
 button {
   color: white;
+}
+
+a {
+  cursor: pointer;
 }
