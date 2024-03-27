@@ -83,3 +83,23 @@ button {
 a {
   cursor: pointer;
 }
+
+footer {
+  background-color: #dfdede; 
+  height: 80px;
+  display: flex;
+  justify-content: center; 
+  align-items: center; 
+}
+
+footer p {
+  font-family: 'Pacifico', cursive; 
+  font-size: 24px; 
+  color: #2c2c2c; 
+  margin: 0; 
+}
+
+footer .copyright {
+  font-size: 24px;
+  vertical-align: middle; 
+}
