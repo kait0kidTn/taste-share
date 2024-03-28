@@ -19,6 +19,8 @@ body {
 
 .navbar {
   position: fixed;
+  top: 0;
+  bottom: 0;
   height: 60px;
   filter: blur(13.7);
   margin: 0 auto;
@@ -80,26 +82,28 @@ button {
   color: white;
 }
 
-a {
+.navbar-brand {
   cursor: pointer;
 }
 
 footer {
-  background-color: #dfdede; 
+  margin-top: 60px;
+  background-color: #e1e8ed;
   height: 80px;
+  position: relative;
+  z-index: -1;
   display: flex;
-  justify-content: center; 
-  align-items: center; 
+  justify-content: center;
+  align-items: center;
 }
 
 footer p {
-  font-family: 'Pacifico', cursive; 
-  font-size: 24px; 
-  color: #2c2c2c; 
-  margin: 0; 
+  font-family: "Pacifico", cursive;
+  font-size: 24px;
+  color: #2c2c2c;
 }
 
 footer .copyright {
   font-size: 24px;
-  vertical-align: middle; 
+  vertical-align: middle;
 }

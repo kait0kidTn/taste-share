@@ -31,7 +31,7 @@ import { AboutComponent } from './about/about.component';
   styleUrl: './app.component.css',
 })
 export class AppComponent {
-  isSubscribed: boolean = true;
+  isSubscribed: boolean = false;
   constructor(private readonly httpClient: HttpClient) {}
 
   toHome() {
