@@ -31,20 +31,5 @@ import { AboutComponent } from './about/about.component';
   styleUrl: './app.component.css',
 })
 export class AppComponent {
-  isSubscribed: boolean = false;
   constructor(private readonly httpClient: HttpClient) {}
-
-  toHome() {
-    document.getElementById('Welcome')?.scrollIntoView({ behavior: 'smooth' });
-  }
-
-  toServices() {
-    document.getElementById('Services')?.scrollIntoView({ behavior: 'smooth' });
-  }
-  toAbout() {
-    document.getElementById('Aboutt')?.scrollIntoView({ behavior: 'smooth' });
-  }
-  toContact() {
-    document.getElementById('Contact')?.scrollIntoView({ behavior: 'smooth' });
-  }
 }
