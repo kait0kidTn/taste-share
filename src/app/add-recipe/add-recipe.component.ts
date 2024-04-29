@@ -26,28 +26,22 @@ export class AddRecipeComponent {
     description: new FormControl(''),
   });
 
+  multimedia: any = {};
+
   onSelectFile(event: any, field: string) {
     const file = event.target.files[0];
-    return file;
+    this.multimedia.field = file;
   }
 
   sendData(): void {
     const formData = new FormData();
-    formData.append('nameR', this.newRecipe.get('name')?.value, '');
-    formData.append('ingR', this.newRecipe.get('ingredients')?.value, '');
-    formData.append(
-      'imgR',
-      this.newRecipe.get('image')?.value,
-      this.newRecipe.get('image')?.value.name
-    );
-    formData.append(
-      'vidR',
-      this.newRecipe.get('video')?.value,
-      this.newRecipe.get('video')?.value.name
-    );
-    formData.append('pubR', this.newRecipe.get('publisher')?.value, '');
-    formData.append('descR', this.newRecipe.get('description')?.value, '');
-    formData.append('descR', this.newRecipe.get('category')?.value, '');
+    formData.append('nameR', this.newRecipe.get('name')?.value);
+    formData.append('ingR', this.newRecipe.get('ingredients')?.value);
+    formData.append('imgR', this.multimedia['image']);
+    formData.append('vidR', this.multimedia['video']);
+    formData.append('pubR', this.newRecipe.get('publisher')?.value);
+    formData.append('descR', this.newRecipe.get('description')?.value);
+    formData.append('catR', this.newRecipe.get('category')?.value);
     this.apiService.sendFormData(formData).subscribe(
       (response: any) => {
         // Handle the success response here

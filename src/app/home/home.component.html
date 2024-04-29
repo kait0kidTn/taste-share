@@ -97,7 +97,13 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav mx-auto mb-2 mb-lg-0 d-lg-flex d-none">
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#"
+              <a
+                class="nav-link active"
+                aria-current="page"
+                href="#"
+                routerLink="/feed"
+                routerLinkActive="active"
+                outlet="user"
                 ><img src="assets/images/home.svg" alt="Home"
               /></a>
             </li>
@@ -130,11 +136,9 @@
                 class="nav-link active"
                 aria-current="page"
                 routerLink="/add-recipe"
-                ><img
-                  src="assets/images/plus.svg"
-                  alt="Home"
-                  routerLink="/add-recipe"
-                  routerLinkActive="active"
+                outlet="user"
+                routerLinkActive="active"
+                ><img src="assets/images/plus.svg" alt="Home"
               /></a>
             </li>
             <li class="nav-item">
@@ -159,6 +163,7 @@
                 aria-current="page"
                 routerLink="/add-recipe"
                 routerLinkActive="active"
+                outler="user"
                 >add Recipe</a
               >
             </li>

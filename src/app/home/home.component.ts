@@ -5,6 +5,7 @@ import { AboutComponent } from '../about/about.component';
 import { ContactComponent } from '../contact/contact.component';
 import { SignInComponent } from '../sign-in/sign-in.component';
 import { SignUpComponent } from '../sign-up/sign-up.component';
+import { RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
 import { CommonModule } from '@angular/common';
 
 @Component({
@@ -20,6 +21,9 @@ import { CommonModule } from '@angular/common';
     SignInComponent,
     SignUpComponent,
     CommonModule,
+    RouterLink,
+    RouterLinkActive,
+    RouterOutlet,
   ],
 })
 export class HomeComponent {

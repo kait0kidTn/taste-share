@@ -32,4 +32,5 @@ import { AboutComponent } from './about/about.component';
 })
 export class AppComponent {
   constructor(private readonly httpClient: HttpClient) {}
+  isSubscribed?: boolean;
 }
