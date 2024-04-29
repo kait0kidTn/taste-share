@@ -79,7 +79,13 @@
           </button>
         </td>
         <td>
-          <button class="btn btn-success" style="margin-right: 7px">
+          <button
+            class="btn btn-success"
+            style="margin-right: 7px"
+            data-bs-toggle="modal"
+            data-bs-target="#exampleModal"
+            (click)="changeRecipeToUpdate(r.id)"
+          >
             Update
           </button>
           <button class="btn btn-danger" (click)="deleteRecipe(r.id)">
@@ -118,5 +124,60 @@
         </tr>
       </tbody>
     </table>
+  </div>
+</div>
+
+<div
+  class="modal fade"
+  id="exampleModal"
+  tabindex="-1"
+  aria-labelledby="exampleModalLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Update recipe</h1>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="modal"
+          aria-label="Close"
+        ></button>
+      </div>
+      <div class="modal-body">
+        <form style="display: flex; justify-content: center">
+          <input
+            type="text"
+            class="form-control"
+            placeholder="recipe name"
+            style="margin-right: 8px"
+            name="name"
+            [(ngModel)]="recipeName"
+          />
+          <select
+            class="form-select"
+            aria-label="Default select example"
+            name="category"
+            [(ngModel)]="category"
+          >
+            <option selected value="Dessert" default>Dessert</option>
+          </select>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+          Close
+        </button>
+        <button
+          data-bs-dismiss="modal"
+          type="button"
+          class="btn btn-primary"
+          (click)="updateRecipe()"
+        >
+          Save changes
+        </button>
+      </div>
+    </div>
   </div>
 </div>

@@ -1,5 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 
 interface Recipe {
@@ -19,7 +20,7 @@ interface Comment {
 @Component({
   selector: 'app-manage-recipes',
   standalone: true,
-  imports: [CommonModule, RouterModule],
+  imports: [CommonModule, RouterModule, FormsModule],
   templateUrl: './manage-recipes.component.html',
   styleUrl: './manage-recipes.component.css',
 })
@@ -46,6 +47,11 @@ export class ManageRecipesComponent {
   public showComments: boolean = false;
   public shownComments: Comment[] = [];
 
+  public recipeToUpdate: number = 0;
+
+  public recipeName: string = '';
+  public category: string = '';
+
   constructor() {}
 
   public changeComments(recipeId: number): void {
@@ -61,5 +67,20 @@ export class ManageRecipesComponent {
   public deleteComment(commentId: number) {
     this.comments = this.comments.filter((comment) => comment.id !== commentId);
     this.shownComments = this.comments;
+  }
+
+  public changeRecipeToUpdate(id: number): void {
+    this.recipeToUpdate = id;
+    const recipeToUpdate = this.recipes.find((r) => r.id == id)!;
+    this.recipeName = recipeToUpdate.name;
+    this.category = recipeToUpdate.category;
+  }
+
+  public updateRecipe(): void {
+    this.recipes = this.recipes.map((r) => {
+      if (r.id == this.recipeToUpdate)
+        return { ...r, name: this.recipeName, category: this.category };
+      else return { ...r };
+    });
   }
 }

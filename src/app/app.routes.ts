@@ -4,6 +4,7 @@ import { AdminComponent } from './admin/admin.component';
 import { HomeComponent } from './home/home.component';
 import { ManageRecipesComponent } from './manage-recipes/manage-recipes.component';
 import { FeedComponent } from './feed/feed.component';
+import { UpdateRecipeComponent } from './update-recipe/update-recipe.component';
 
 export const routes: Routes = [
   { path: 'feed', component: FeedComponent },
