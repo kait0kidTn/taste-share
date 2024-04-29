@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { RouterLink, RouterLinkActive } from '@angular/router';
+import { RouterLink, RouterLinkActive, provideRouter } from '@angular/router';
 import { RouterOutlet } from '@angular/router';
 import { WelcomeComponent } from './welcome/welcome.component';
 import { ServicesComponent } from './services/services.component';

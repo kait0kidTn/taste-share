@@ -1,0 +1,46 @@
+.pinterest-post {
+  margin: 100px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  margin-bottom: 20px;
+  padding: 10px;
+  display: flex; /* Arrange image and content side-by-side */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+.pinterest-post img {
+  width: 200px;
+  height: auto;
+  object-fit: cover; /* Resize image to fit while maintaining aspect ratio */
+  margin-right: 15px;
+}
+
+.pinterest-post-content {
+  flex: 1; /* Allow content to fill remaining space */
+}
+
+.pinterest-post-title {
+  font-weight: bold;
+  font-size: 18px;
+  margin-bottom: 5px;
+}
+
+.pinterest-post-description {
+  color: #777;
+  line-height: 1.5; /* Adjust line spacing for readability */
+}
+
+.pinterest-post-user {
+  font-size: 14px;
+  color: #aaa;
+  margin-top: 10px; /* Space between content and user info */
+}
+
+.pinterest-post-user a {
+  color: inherit; /* Inherit text color from parent */
+  text-decoration: none; /* Remove underline from link */
+}
+
+.pinterest-post-user a:hover {
+  text-decoration: underline; /* Underline on hover */
+}
