@@ -1,0 +1,68 @@
+.pinterest-post {
+  margin-top: 100px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  position: relative;
+  margin-bottom: 20px;
+  height: 500px; /* Arrange image and content side-by-side */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+.pinterest-post .recipe-pic {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Resize image to fit while maintaining aspect ratio */
+  margin-right: 15px;
+  border-radius: inherit;
+}
+
+.pinterest-post-content {
+  flex: 1; /* Allow content to fill remaining space */
+}
+
+.pinterest-post-title {
+  font-weight: bold;
+  font-size: 18px;
+  margin-bottom: 5px;
+}
+
+.pinterest-post .user-pic {
+  background-color: #777;
+  border-radius: 50%;
+}
+
+.pinterest-post-description {
+  color: #777;
+  line-height: 1.5; /* Adjust line spacing for readability */
+}
+
+.pinterest-post-user {
+  z-index: 1;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  font-size: 14px;
+  color: #aaa;
+  margin-top: 10px; /* Space between content and user info */
+}
+
+.pinterest-post-user a {
+  color: inherit; /* Inherit text color from parent */
+  text-decoration: none; /* Remove underline from link */
+  display: flex;
+}
+
+.pinterest-post-user a:hover {
+  text-decoration: underline; /* Underline on hover */
+}
+
+.pinterest-post .like-button {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  font-size: 30px;
+  outline: none;
+  text-decoration: none;
+  background-color: transparent;
+  border: none;
+}

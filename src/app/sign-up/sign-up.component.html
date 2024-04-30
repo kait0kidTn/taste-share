@@ -1,0 +1,35 @@
+<div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="fs-5 text-center" id="exampleModalLabel" style="margin-left: 25%">Welcome to Taste Share</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form>
+          <div class="mb-3">
+            <label for="usernameSignup" class="form-label">Username</label>
+            <input type="text" class="form-control" id="usernameSignup" [(ngModel)]="name" name="usernameSignup">
+          </div>
+          <div class="mb-3">
+            <label for="familynameSignup" class="form-label">Family name</label>
+            <input type="text" class="form-control" id="familynameSignup" [(ngModel)]="famname" name="familynameSignup">
+          </div>
+          <div class="mb-3">
+            <label for="emailSignup" class="form-label">Email</label>
+            <input type="email" class="form-control" id="emailSignup" [(ngModel)]="email" name="emailSignup">
+          </div>
+          <div class="mb-3">
+            <label for="passwordSignup" class="form-label">Password</label>
+            <input type="password" class="form-control" id="passwordSignup" [(ngModel)]="password" name="passwordSignup">
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer" style="display: flex; justify-content: center">
+        <button type="button" class="btn btn-primary" (click)="signup()">Sign Up</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal2">Open Signup Modal</button>

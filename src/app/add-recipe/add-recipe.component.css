@@ -1,0 +1,118 @@
+.container {
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+.container .title {
+  margin-bottom: 60px;
+}
+
+body {
+  background-color: #eee;
+}
+
+/* Switcher*/
+.switcher {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+}
+
+/* NavBar */
+
+.navbar-nav {
+  display: flex;
+  justify-content: space-between;
+  width: 20%;
+}
+
+.navbar {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  height: 60px;
+  filter: blur(13.7);
+  margin: 0 auto;
+  width: 100%;
+  z-index: 1000;
+  background-color: #e1e8ed;
+}
+
+nav ul {
+  list-style-type: none;
+  display: flex;
+  justify-content: space-around;
+}
+
+/* search bar*/
+div:has(.search) {
+  position: relative;
+}
+
+div .search {
+  background-color: #e1e8ed;
+  filter: blur(13.7);
+}
+
+.search:focus {
+  outline: none;
+  box-shadow: none;
+}
+/* */
+nav ul li:last-child a img {
+  width: 30px;
+  height: 30px;
+  border-radius: 35px;
+  background-size: cover;
+}
+
+nav ul li a:hover {
+  background-color: #e1e8ed;
+  border-radius: 12px;
+  transition: 0.3s ease;
+}
+
+.nav-link {
+  padding-left: 15px;
+}
+
+.pacifico-regular {
+  font-family: "Pacifico", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+#navbarNav .nav-link {
+  margin-right: 20px;
+  margin-left: 20px;
+}
+
+button {
+  color: white;
+}
+
+.navbar-brand {
+  cursor: pointer;
+}
+
+footer {
+  margin-top: 60px;
+  background-color: #e1e8ed;
+  height: 80px;
+  position: relative;
+  z-index: -1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+footer p {
+  font-family: "Pacifico", cursive;
+  font-size: 24px;
+  color: #2c2c2c;
+}
+
+footer .copyright {
+  font-size: 24px;
+  vertical-align: middle;
+}

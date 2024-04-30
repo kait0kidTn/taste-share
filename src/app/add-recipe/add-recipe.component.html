@@ -1,0 +1,203 @@
+<nav class="navbar navbar-expand-lg bg-body-tertiary">
+  <div class="container-fluid">
+    <button
+      class="navbar-toggler mx-2"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <a class="navbar-brand pacifico-regular">Taste&Share</a>
+    <form
+      class="d-flex align-content-center d-lg-none pe-auto col"
+      role="search"
+    >
+      <input
+        class="form-control mx-2"
+        type="search"
+        placeholder="Search"
+        aria-label="Search"
+      />
+    </form>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mx-auto mb-2 mb-lg-0 d-lg-flex d-none">
+        <li class="nav-item">
+          <a
+            class="nav-link active"
+            aria-current="page"
+            href="#"
+            routerLink="/feed"
+            routerLinkActive="active"
+            outlet="user"
+            ><img src="assets/images/home.svg" alt="Home"
+          /></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#"
+            ><img src="assets/images/category.svg" alt=""
+          /></a>
+        </li>
+      </ul>
+      <!-- For display nav items as text for little screens -->
+      <ul class="navbar-nav mt-2 mb-2 mb-lg-0 d-lg-none d-sm-block w-100">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Categories</a>
+        </li>
+      </ul>
+      <form class="d-lg-flex d-none" role="search">
+        <input
+          class="form-control mx-2"
+          type="search"
+          placeholder="Search"
+          aria-label="Search"
+        />
+      </form>
+      <ul class="navbar-nav mx-auto mb-2 mb-lg-0 d-lg-flex d-none">
+        <li class="nav-item">
+          <a
+            class="nav-link active"
+            aria-current="page"
+            routerLink="/add-recipe"
+            outlet="user"
+            routerLinkActive="active"
+            ><img src="assets/images/plus.svg" alt="Home"
+          /></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#"
+            ><img src="assets/images/bell_icon.svg" alt=""
+          /></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#"
+            ><img
+              class="img-fluid"
+              src="assets/images/profile.jpg"
+              alt="profile"
+          /></a>
+        </li>
+      </ul>
+      <!-- For display nav items as text for little screens -->
+      <ul class="navbar-nav mb-2 mb-lg-0 d-lg-none d-sm-block w-100">
+        <li class="nav-item">
+          <a
+            class="nav-link active"
+            aria-current="page"
+            routerLink="/add-recipe"
+            routerLinkActive="active"
+            outler="user"
+            >add Recipe</a
+          >
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Profile</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Notification</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<br /><br /><br />
+
+<div class="container">
+  <h1 class="title">Add Recipe</h1>
+  <form (ngSubmit)="sendData()">
+    <!-- 2 column grid layout with text inputs for the first and last names -->
+    <div class="form-floating mb-3" [formGroup]="newRecipe">
+      <input
+        type="text"
+        class="form-control"
+        id="nameR"
+        name="nameR"
+        formControlName="name"
+        placeholder="Enter your name"
+      />
+      <label for="name">Recipe Name</label>
+    </div>
+    <div class="form-floating mb-3" [formGroup]="newRecipe">
+      <input
+        type="text"
+        class="form-control"
+        id="ingR"
+        formControlName="ingredients"
+        name="ingR"
+        placeholder=""
+      />
+      <label for="ingR">Ingredients</label>
+    </div>
+    <div class="form-floating mb-3" [formGroup]="newRecipe">
+      <select
+        name="cat"
+        id="cat"
+        class="form-select"
+        formControlName="category"
+      >
+        <option value="1">Dessert</option>
+      </select>
+      <label for="cat">Category</label>
+    </div>
+    <div class="input-group mb-3" [formGroup]="newRecipe">
+      <label for="imgR" class="input-group-text">Image url</label>
+      <input
+        type="file"
+        (change)="onSelectFile($event, 'image')"
+        class="form-control"
+        id="imgR"
+        formControlName="image"
+        name="imgR"
+        placeholder=""
+      />
+    </div>
+    <div class="input-group mb-3" [formGroup]="newRecipe">
+      <label for="vidR" class="input-group-text"
+        >Video url (Optional if there is a description)</label
+      >
+      <input
+        type="file"
+        (change)="onSelectFile($event, 'video')"
+        class="form-control"
+        id="vidR"
+        formControlName="video"
+        name="vidR"
+        placeholder=""
+      />
+    </div>
+    <div class="form-floating mb-4" [formGroup]="newRecipe">
+      <input
+        type="text"
+        class="form-control"
+        id="pubR"
+        name="pubR"
+        placeholder=""
+        formControlName="publisher"
+      />
+      <label for="imgR">Publisher</label>
+    </div>
+    <div class="mb-3" [formGroup]="newRecipe">
+      <label for="descR">Description (optional if there is a video)</label>
+      <textarea
+        class="form-control"
+        id="descR"
+        name="descR"
+        formControlName="description"
+        placeholder="Description"
+        rows="4"
+        cols="50"
+      ></textarea>
+    </div>
+    <!-- Submit button -->
+    <button type="submit" class="btn btn-primary mb-4 me-3">Add Recipe</button>
+    <button type="reset" class="btn btn-danger mb-4">Cancel</button>
+  </form>
+</div>
