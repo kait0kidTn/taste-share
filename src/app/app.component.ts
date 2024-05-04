@@ -10,6 +10,8 @@ import { AddRecipeComponent } from './add-recipe/add-recipe.component';
 import { SignUpComponent } from './sign-up/sign-up.component';
 import { CommonModule } from '@angular/common';
 import { AboutComponent } from './about/about.component';
+import { ManageUsersComponent } from './manage-users/manage-users.component';
+import { ManageCategoriesComponent } from './manage-categories/manage-categories.component';
 @Component({
   selector: 'app-root',
   standalone: true,
@@ -26,6 +28,8 @@ import { AboutComponent } from './about/about.component';
     AboutComponent,
     RouterLink,
     HttpClientModule,
+    ManageUsersComponent,
+    ManageCategoriesComponent,
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',

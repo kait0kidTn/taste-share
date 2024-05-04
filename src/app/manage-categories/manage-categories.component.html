@@ -1,0 +1,45 @@
+<div>
+    <h2>Manage Categories</h2>
+
+    <!-- Add category form -->
+    <form>
+        <div class="form-group">
+            <label for="categoryName">Category Name:</label>
+            <input type="text" class="form-control" id="categoryName" [(ngModel)]="categoryName" name="categoryName"> 
+        </div>
+        <button type="button" class="btn btn-primary" (click)="addCategory()">Add</button> 
+    </form>
+
+    <!-- Categories table -->
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>ID Category</th>
+                <th>Name Category</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let category of categories">
+                <td>{{ category.id_cat }}</td>
+                <td>{{ category.name_cat }}</td>
+                <td>
+                    <!-- Button to toggle the update form -->
+                    <button type="button" class="btn btn-success" (click)="showUpdateForm(category)">Update</button>
+                    <!-- Button to delete the category -->
+                    <button type="button" class="btn btn-danger" (click)="deleteCategory(category.id_cat)">Delete</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<!-- Update form -->
+<div class="showForm" *ngIf="updateFormVisible">
+    <form>
+        New Name:  <input type="text" class="form-control" [(ngModel)]="newCategoryName" name="newCategoryName">
+        <br>
+        <button type="button" class="btn btn-success" (click)="confirmUpdate()">Confirm</button> 
+        <button type="reset" class="btn btn-danger">Reset</button> 
+    </form>
+</div>

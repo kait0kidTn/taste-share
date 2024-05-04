@@ -1,44 +1,41 @@
 import { Component } from '@angular/core';
-import { HttpClient, HttpClientModule } from '@angular/common/http';
-import { CommonModule } from '@angular/common';
+import { HttpClient } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-sign-up',
   standalone: true,
-  imports: [CommonModule, FormsModule, HttpClientModule],
   templateUrl: './sign-up.component.html',
-  styleUrl: './sign-up.component.css',
+  styleUrls: ['./sign-up.component.css'],
+  imports: [FormsModule, CommonModule],
 })
 export class SignUpComponent {
-  passwordSignup: any;
-  confirmPasswordSignup: any;
+  name: string = '';
+  famname: string = '';
+  email: string = '';
+  password: string = '';
+
   constructor(private readonly httpClient: HttpClient) {}
-  public passwordType: string = 'password';
-  public confirmPasswordType: string = 'password';
-  public passwordMismatch: boolean = false;
-  public changePasswordType(checked: boolean) {
-    this.passwordType = checked ? 'text' : 'password';
-  }
-  public changeConfirmPasswordType(checked: boolean) {
-    this.confirmPasswordType = checked ? 'text' : 'password';
-  }
-  public changePasswordType1(checked: boolean) {
-    this.passwordType = checked ? 'text' : 'password';
-  }
-  public validatePasswords() {
-    const password = this.passwordSignup.value;
-    const confirmPassword = this.confirmPasswordSignup.value;
-    this.passwordMismatch = password !== confirmPassword;
-  }
-  signup(name: string, famname: string, email: string, password: string) {
-    console.log({ name, famname, email, password });
+
+  signup() {
+    const userData = {
+      name: this.name,
+      famname: this.famname,
+      email: this.email,
+      password: this.password,
+    };
 
     this.httpClient
-      .post('http://localhost/signup.php', { name, email, password })
+      .post<any>('http://localhost/phpfiles/signup.php', userData)
       .subscribe(
         (response) => {
           console.log('Signup successful:', response);
+          // Reset form fields after successful signup
+          this.name = '';
+          this.famname = '';
+          this.email = '';
+          this.password = '';
         },
         (error) => {
           console.error('Signup error:', error);
