@@ -8,6 +8,7 @@ import { UpdateRecipeComponent } from './update-recipe/update-recipe.component';
 import { ManageCategoriesComponent } from './manage-categories/manage-categories.component';
 import { ManageUsersComponent } from './manage-users/manage-users.component';
 
+
 export const routes: Routes = [
   { path: 'feed', component: FeedComponent },
   { path: 'home', component: HomeComponent },
