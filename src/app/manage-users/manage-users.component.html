@@ -1,0 +1,39 @@
+<div>
+    <h1>Manage Users</h1>
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Family Name</th>
+          <th>Name</th>
+          
+          <th>Mail</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let user of users">
+          <td>{{ user.ID_User }}</td>
+          <td>{{ user.Family_Name }}</td>
+          <td>{{ user.Name }}</td>
+          <td>{{ user.EMail }}</td>
+          <td>
+            <a href="#" class="btn btn-success" (click)="showUpdateForm(user)">Update</a>
+            <a href="#" class="btn btn-danger" (click)="deleteUser(user.ID_User)">Delete</a>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  
+    <div class="showform" *ngIf="updateFormVisible">
+      <form>
+        Name : <input type="text" class="form-control"  required> <br>
+        Family Name : <input type="text" class="form-control"  required> <br>
+        Mail : <input type="mail" class="form-control"  required> <br>
+        Password : <input type="mail" class="form-control"  required> <br>
+        <button type="button" class="btn btn-success" (click)="updateUserDetails()">Update</button><br>
+        <button type="reset" class="btn btn-danger" >Cancel</button>
+      </form>
+    </div>
+  </div>
+  
